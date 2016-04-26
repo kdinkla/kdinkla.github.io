@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://www.win.tue.nl/~kdinkla/biotaviz.html -->
+<html class="no-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>BiotaViz: Supplementary Data</title>
+
+<meta http-equiv="cleartype" content="on">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css" media="all">
+
+<script src="jquery.min.js"></script><style type="text/css"></style>
+<script src="main.js"></script>
+
+<style type="text/css">.jlhlebbhengjlhmcjebbkambaekglhkf {top: 0px; left: 0px;min-width: 30px;max-width: 300px;font-size: 13px;font-family: arial, helvetica, sans-serif;opacity: .93;padding:0px;position:absolute;display:block;z-index: 999997;font-style: normal;font-variant: normal;font-weight: normal;}#jlhlebbhengjlhmcjebbkambaekglhkf_up{text-align: center;padding:0px;margin: 0px;}#jlhlebbhengjlhmcjebbkambaekglhkf_cont{background-color: #729FCF;font-family: arial, helvetica, sans-serif-webkit-box-shadow: #729FCF 0px 0px 2px;color: #FFFFFF;padding:7px;-webkit-border-radius: 5px;}#jlhlebbhengjlhmcjebbkambaekglhkf_down{text-align: center;padding:0px;margin: 0px;}</style></head>
+
+<body>
+<div id="container" class="cf">
+<article>
+
+<div class="cf">
+<h1>BiotaViz</h1>
+
+<div class="column">
+<p>
+Advances in rapid genome sequencing allow for cost-effective microbiota research.
+It is now possible to take a sample from an environment and approximate the abundance
+of different microbes that inhabit said environment. Such information can be investigated
+by experts to discover trends that lead to new hypotheses. BiotaViz is a tool
+that makes these investigations more efficient by combining various visualization
+techniques and analysis algorithms:
+</p>
+<ul>
+	<li>Visualization of a microbe taxonomy as a tree that can be explored
+      via the animated expansion and collapse of its branches;
+	</li>
+	<li>The depiction of microbe abundance—for a large number of samples—with
+        heat maps that are superimposed on the taxonomy tree;
+	</li>
+	<li>Discovery of abundance patterns via interactive reordering
+        and automated clustering of samples;
+	</li>
+	<li>Additional views that are linked to the taxonomy, which provide detailed
+      information about taxonomy structure, microbe abundance, and sample metadata.
+	</li>
+</ul>
+</div>
+
+<div class="column">
+    <a href="biotaviz.png" class="lightbox"><img class="full" src="biotaviz.png"></a>
+</div>
+</div>
+
+<div class="cf">
+<h1>Citation</h1>
+    
+<div class="column">
+<p>
+<a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1467-8659.2011.01963.x/abstract" target="_blank">
+    K. Dinkla, M. A. Westenberg, H. Timmerman, S.A.F.T. van Hijum,
+    J.J. van Wijk. Comparison of multiple weighted hierarchies: visual
+    analytics for microbe community profiling. <i>Computer Graphics
+    Forum</i> 30(3):1141-1150, 2011.
+</a>
+</p>
+</div>
+</div>
+
+<div class="cf">
+<h1>Getting started</h1>
+
+<div class="column">
+<p>Perform the following steps to get started:</p>
+<ol>
+	<li>Download and install the <a href="http://www.java.com/en/download/" target="_blank">latest version of JAVA</a> 1.6 or 1.7;</li>
+	<li>Download the <a href="http://www.win.tue.nl/~kdinkla/biotaviz/biotaviz.zip">BiotaViz archive</a> and unpack it to a desirable
+			location on your hard drive;</li>
+	<li>Launch <i>BiotaViz.jar</i> directly or execute the OS-specific scripts;</li>
+	<li>Read the walk-through below.</li>
+</ol>
+
+<p>Beware that recent versions of JAVA 1.7 for iOS have graphics difficulties. JAVA 1.6 should function correctly.</p>
+</div>
+</div>
+
+<div class="cf">
+<h1>Taxonomy</h1>
+
+<div class="column">
+<p>
+    Upon startup BiotaViz loads input files that encode
+    abundance and metadata of samples taken from gut microbiota
+    of individuals spread across different geographic regions
+    <a href="http://www.nature.com/nature/journal/v486/n7402/full/nature11053.html" target="_blank">[Yatsunenko2012]</a>.
+    After startup BiotaViz presents only the top taxon <i>Bacteria</i> at the
+    <i>Kingdom</i> level. This is not immediately apparent because taxon names
+    are not shown by default. The top bar of colored icons are the primary
+    controls of the application and hovering over them displays tool tips
+    that clarify their function. Find the icon with the <i>Show taxon names</i>
+    function and press it. Now the <i>Bacteria</i> taxon is easily identified.
+</p>
+
+<p>
+    The taxonomy is explored further by clicking the dark triangle beneath the
+    <i>Bacteria</i> taxon, which shows the taxa—present in the dataset—that
+    constitute <i>Bacteria</i> at the <i>Phylum</i> level. The triangles (or trapezoids)
+    underneath the taxa have differing shapes that summarize the hidden taxonomy
+    branches, where the number of hidden levels and taxa are expressed as triangle
+    length and width respectively. Clicking the dark circle underneath <i>Bacteria</i>
+    again hides the underlying taxa.
+</p>
+
+<p>
+    Exploring targeted taxa at deeper levels of the taxonomy is enabled by
+    the <i>Taxon list</i> (icon at the upper right). Taxa <i>Bacteroides</i>,
+    <i>Ruminococcus</i>, and <i>Prevotella</i> are of interest to us because
+    they have been described as primary drivers for the stratification of
+    individuals into three enterotypes
+    <a href="http://www.nature.com/nature/journal/v473/n7346/full/nature09944.html" target="_blank">[Arumugam2011]</a>.
+    We make these taxa visible
+    by entering (part of) their names in the search field and double-clicking
+    them when they appear in the underlying list of matched taxa. This action
+    also selects the given taxa, assigning unique colored tags that are of
+    use in the latter part of our analysis.
+</p>
+</div>
+
+<div class="column">
+    <div class="lefthalf">
+    BiotaViz at startup
+    <a href="1_startup.png" class="lightbox">
+	    <img src="1_startup.png">
+    </a>
+    </div>
+    <div class="righthalf">
+    Showing taxon labels
+    <a href="2_switch_label.png" class="lightbox">
+	    <img src="2_switch_label.png">
+    </a>
+    </div>
+
+    <div class="lefthalf">
+    Exploration of <i>Bacteria</i>
+    <a href="3_expand_taxon.png" class="lightbox">
+	    <img src="3_expand_taxon.png">
+    </a>
+    </div>
+    <div class="righthalf">
+    Taxon list search
+    <a href="4_search_taxon.png" class="lightbox">
+	    <img src="4_search_taxon.png">
+    </a>
+    </div>
+
+    Selection of <i>Bacteroides</i>, <i>Ruminococcus</i> and <i>Prevotella</i>
+    <a href="5_interest_expand.png" class="lightbox">
+	    <img src="5_interest_expand.png">
+    </a>
+</div>
+
+</div>
+
+<div class="cf">
+<h1>Abundance</h1>
+
+<div class="column">
+<p>
+    We switch back to the heat map mode by clicking the corresponding icon (<i>Show heat maps</i>).
+    Now each taxon is superimposed with a heat map that maps relative abundance of microbes
+    to colors, i.e., low, average and high abundance map to black, yellow and white respectively.
+    The microbe abundance of every sample is arranged top to bottom and can be discerned as the
+    colored, horizontal lines that compose a heat map. This enables the comparison of abundance
+    between samples for a specific taxon. <i>Prevotella</i>, for example, has a group of
+    mostly high abundance samples at the start followed by multiple low and high abundance
+    groups.
+</p>
+
+<p>
+    The ordering of samples is universal throughout the application to enable
+    the comparison of sample abundance between multiple taxa. <i>Bacteroides</i> and
+    <i>Prevotella</i>, for example, appear to be anticorrelated; in most cases a sample
+    group of high abundance in <i>Bacteroides</i> is accompanied by low abundance for
+    the same sample group in <i>Prevotella</i>, and vice-versa.
+</p>
+
+<p>
+    The conversion—and intermittent scaling—of abundance to colors in a heat map
+    affect the visual prominence of patterns at both local and global scopes.
+    Abundance is scaled amongst sibling taxa by default, which enables abundance comparison between
+    sibling taxa. The dominance of <i>Bacteroidetes</i> and <i>Firmicutes</i> at the
+    <i>Phylum</i> level, for example, is clear because they are siblings and therefore
+    subject to the same scaling. However, sample abundance patterns for individual taxa
+    may be suppressed. We thus see more taxon-specific patterns for siblings of
+    <i>Bacteroidetes</i> when we switch to <i>Scale per taxon</i>, but lose the ability
+    to assess the overall dominance between sibling taxa. Likewise, when we switch to
+    <i>Scale per level</i> we are able to compare abundance of the three tagged taxa at
+    the <i>Genus</i> level. Patterns at the lower end of the abundance scale can be
+    emphasized in this situation by switching to logarithmic scaling
+    (press the <i>Scale logarithmically</i> icon).
+</p>
+
+<p>
+    BiotaViz depicts relative abundance; any number that indicates abundance
+    in the input file will be scaled and will therefore not serve as a clear indication
+    of absolute abundance.
+</p>
+</div>
+
+
+<div class="column">
+    Showing heat maps with abundance scaled per sibling group
+    <a href="6_heat_maps.png" class="lightbox">
+	    <img src="6_heat_maps.png">
+    </a>
+
+    <div class="lefthalf">
+    Abundance scaled per taxon
+    <a href="7_scale_taxon.png" class="lightbox">
+	    <img src="7_scale_taxon.png">
+    </a>
+    </div>
+
+    <div class="righthalf">
+    Abundance scaled per level
+    <a href="8_scale_level.png" class="lightbox">
+	    <img src="8_scale_level.png">
+    </a>
+    </div>
+
+    Abundance on a logarithmic scale
+    <a href="9_scale_logarithmically.png" class="lightbox">
+	    <img src="9_scale_logarithmically.png">
+    </a>
+</div>
+</div>
+
+<div class="cf">
+<h1>Metadata</h1>
+
+<div class="column">
+<p>
+    The current abundance patterns as they appear in the heat maps are of
+    little use without the context of sample metadata. This information is
+    accessed by opening the <i>Sample list</i> (icon at the upper right),
+    where the <i>Taxon list</i> can be closed to save space. Now we see
+    a table of all samples to the right, where samples have the same
+    universal ordering as for the heat maps. Initially, the first three metadata
+    fields <i>Name</i>, <i>Age</i>, and <i>Country</i> of <i>input_meta.txt</i>
+    are shown as columns, in addition to a concentration column that is empty.
+</p>
+
+<p>
+    The scroll bar is used to inspect metadata of all samples but the same is
+    also achieved by hovering over the heat map of a taxon. Hovering a taxon
+    also fills the concentration column with bars that indicate the taxon's
+    abundance to ease cross-referencing with metadata. For example, hovering
+    over a dark patch of samples of <i>Prevotella</i> reveals that most samples
+    with low abundance originate from the <i>USA</i>.
+</p>
+
+<p>
+    The order of the samples is the same as specified in <i>input_meta.txt</i>,
+    which works to our advantage because the input samples are mostly grouped
+    by country and therefore reveal an abundance correlation for the tagged taxa.
+    Stronger grouping of samples, based on their abundance, is achieved via the
+    <i>Order samples by similarity</i> function. This rearranges samples by
+    similarity of their abundances for the tagged taxa,
+    as follows from the larger patches of high and low abundance that are now
+    seen for <i>Bacteroides</i>, <i>Prevotella</i>, and <i>Ruminococcus</i>.
+    Closer inspection of metadata for the low abundance patch of <i>Prevotella</i>
+    again shows mostly <i>USA</i> as country of origin.
+</p>
+
+<p>
+    The <i>Field Configuration</i> window enables us to verify this observation
+    by sorting samples by their metadata. Dragging <i>Country</i> from the
+    <i>Visible</i> to the <i>Sorted</i> list sorts samples by their country
+    of origin. The correlation between countries and sample abundance are now
+    seen in the heat maps without further inspection of metadata, in the tagged
+    taxa as well as some of the remaining taxa. The other metadata fields
+    <i>Name</i> and <i>Age</i> are not of interest and removed by dragging them
+    from the <i>Visible</i> to <i>Invisible</i> list. 
+</p>
+</div>
+
+<div class="column">
+    Detailed sample view
+    <a href="10_metadata_list.png" class="lightbox">
+	    <img src="10_metadata_list.png">
+    </a>
+
+    <div class="lefthalf">
+    Hovered <i>Prevotella</i>
+    <a href="11_metadata_hover.png" class="lightbox">
+	    <img src="11_metadata_hover.png">
+    </a>
+    </div>
+
+    <div class="righthalf">
+    Clustered samples
+    <a href="12_metadata_cluster.png" class="lightbox">
+	    <img src="12_metadata_cluster.png">
+    </a>
+    </div>
+
+    <div class="lefthalf">
+    Configuration of metadata
+    <a href="13_metadata_configuration.png" class="lightbox">
+	    <img src="13_metadata_configuration.png">
+    </a>
+    </div>
+
+    <div class="righthalf">
+    Samples sorted by <i>Country</i>
+    <a href="14_metadata_sorted.png" class="lightbox">
+	    <img src="14_metadata_sorted.png">
+    </a>
+    </div>
+</div>
+</div>
+
+<div class="cf">
+<h1>Charts</h1>
+
+<div class="column">
+<p>
+    Abundance heat maps of tagged taxa are aligned with sorted
+    metadata in the <i>Taxon Comparison</i> window. Separate abundance
+    scaling options are chosen by clicking the right mouse button:
+    <i>All taxa</i> scales abundance with respect to the maximum of
+    all taxa in the taxonomy (hence the abundance of the root taxon),
+    <i>Tagged taxa</i> scales according to the maximum of all tagged
+    taxa, and <i>Per taxon</i> scales abundances per taxon heat map.
+</p>
+<p>
+    Samples of tagged taxa are grouped according to sorted metadata
+    fields in the <i>Chart</i> window, where sample abundance is
+    averaged and visualized as bars. Here abundance is interpreted
+    as a percentage of the root taxon's abundance (for a specific sample).
+    Therefore, the <i>Bacteria</i> taxon shows <i>100%</i> for all
+    sample groups when it is hovered, because only <i>Bacteria</i>
+    were targeted for the example input files.
+</p>
+<p>
+    Images are exported by clicking the right mouse button on
+    a visualization and clicking <i>Save image</i> in the menu
+    that pops up. Multiple export formats are supported, including
+    <i>JPG</i> and <i>EPS</i>.
+</p>
+</div>
+
+<div class="column">
+    <div class="lefthalf">
+    Taxon comparison
+    <a href="15_taxon_comparison.png" class="lightbox">
+	    <img src="15_taxon_comparison.png">
+    </a>
+    </div>
+    
+    <div class="righthalf">
+    Bar chart
+    <a href="16_chart.png" class="lightbox">
+	    <img src="16_chart.png">
+    </a>
+    </div>
+</div>
+</div>
+
+
+<div class="cf">
+<h1>Input</h1>
+
+<div class="column">
+<p>
+    BiotaViz loads two files upon startup: <i>input.txt</i> and <i>input_meta.txt</i>.
+    The first file describes the taxa that make up a microbial taxonomy and the corresponding
+    microbe abundance per sample. The second file annotates samples with metadata such
+    as sample subject conditions.
+</p>
+<p>
+    The <i>input.txt</i> file is tab-delimited, where the first row serves as a header
+    with fixed tags <i>Class</i>, <i>Taxon</i>, and <i>Level</i> for the first three
+    columns, and an identifier per sample for the remaining columns. Every subsequent row
+    encodes a taxon:
+    </p><ul>
+        <li>
+            <i>Class</i> is a hierarchical identifier where <i>Firmicutes</i>, for example,
+            has class <i>1.1.2.</i> as the second child of <i>Bacteria</i>, which in turn is
+            the first child of <i>Root</i>;
+        </li>
+        <li>
+            <i>Taxon</i> is a textual identifier, e.g. <i>Firmicutes</i>;
+        </li>
+        <li>
+            <i>Level</i> specifies the rank of a taxon, e.g. <i>Bacteria</i> belongs
+            to the <i>Kingdom</i> level, where <i>Level</i> is consistent with taxon
+            depth (all <i>Phylum</i> taxa, for example, have a depth of three);
+        </li>
+        <li>
+            Remaining columns of a row specify the microbe abundance per sample
+            as positive numbers, where a taxon's abundance surplus with respect
+            to the summed abundance of its children taxa is corrected for by
+            assigning the surplus to a child <i>Remainder</i> taxon in BiotaViz
+            itself.
+        </li>
+    </ul>
+<p></p>
+
+<p>
+    The <i>input_meta.txt</i> is tab-delimited as well, where the first row
+    serves as a header with the fixed tag <i>Sample</i> and metadata field
+    identifiers for the remaining columns. Every subsequent row encodes the
+    metadata of a sample, where <i>Sample</i> is the sample identifier and
+    the remaining columns specify the metadata values per field.
+</p>
+</div>
+
+<div class="column">
+    Example fragment of <i>input.txt</i>
+    <pre>Class   Taxon           Level     Amz19chld   Amz20chld
+1.      Root            Domain	  99.68       98.78
+1.1.    Bacteria        Kingdom	  99.68       98.78
+1.1.1.  Proteobacteria  Phylum	  3.9         5.7
+1.1.2.  Firmicutes      Phylum	  81.14       49.2
+1.1.3.  Actinobacteria  Phylum	  1.04        0.7
+1.1.4.  Elusimicrobia   Phylum	  0           0.5
+1.1.6.  Bacteroidetes   Phylum	  12.89       39.72
+1.1.7.  Fusobacteria    Phylum	  0           0</pre>
+
+    Example fragment of <i>input_meta.txt</i>
+    <pre>Sample      Country     Region        Gender
+Amz11inf    Venezuela   Platanillal   Male
+Amz13chld   Venezuela   Platanillal   Female
+Amz19chld   Venezuela   Platanillal   NA
+Amz20chld   Venezuela   Platanillal   NA</pre>
+</div>
+</div>
+
+<div class="cf">
+<h1>16S Input</h1>
+
+<div class="column">
+    The input file format of BiotaViz facilitates the custom 
+    preprocessing of microbe abundance data (and even non-microbe
+    abundance data). For 16S data specifically, the
+    <a href="http://www.cmbi.ru.nl/" target="_blank">CMBI (UMC St Radboud Nijmegen)</a>
+    provides a <a href="http://bamics2.cmbi.ru.nl/websoftware/class16S/class16S_start.php" target="_blank">conversion tool</a>.
+</div>
+</div>
+
+</article>
+</div>
+
+
+<div id="lightbox" style="display: none;"><div id="lightboxContent"><img src="biotaviz.png"></div></div></body></html>
