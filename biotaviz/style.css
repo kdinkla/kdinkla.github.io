@@ -30,9 +30,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
-/* Fonts. */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+/* Embedded fonts. */
+@font-face {
+    font-family: mPlus;
+    src: local('Segoe UI'), url('mplus-2p-regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: mPlusMono;
+    src: local('Segoe UI Mono'), url('mplus-2m-regular.ttf') format("truetype");
+}
 
 /* Root. */
 html {
@@ -50,7 +57,7 @@ img, embed, object, video {
 
 /* Typography. */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: mPlus;
     font-size: 1em;
     line-height: 1.618em;
     color: #333;
@@ -84,7 +91,7 @@ img {
 
 pre {
     background: white;
-    font-family: 'Inconsolata', ;
+    font-family: mPlusMono;
     padding: 0.405em;
 }
 
